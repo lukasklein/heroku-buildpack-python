@@ -181,6 +181,8 @@ source $BIN_DIR/steps/pip-install
 # Django collectstatic support.
 sub-env $BIN_DIR/steps/collectstatic
 
+# Django migrations support.
+sub-env $BIN_DIR/steps/migrate
 
 # ### Finalize
 #
@@ -227,4 +229,3 @@ if [[ ! "$DOCKER_BUILD" ]]; then
   bpwatch stop anvil_appdir_commit
   bpwatch stop compile
 fi
-
